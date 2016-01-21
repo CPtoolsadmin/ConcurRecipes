@@ -23,9 +23,6 @@ The order in which most Concur partners obtain travel data from Concur is:
 
 Each of these processes can be used by itself. For example if a travel supplier only wanted to obtain itinerary details, they can follow the Get Itinerary Details process described below.
 
-
-Each of these processes can be used by itself. For example if a travel supplier only wanted to obtain itinerary details, they can follow the Get Itinerary Details process described below.
-
 #### Get List of Itineraries:
 The GET List of Itineraries required for the Get Itinerary endpoint is located in the official Concur developer page [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getlist).
 
