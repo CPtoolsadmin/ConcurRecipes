@@ -1,5 +1,5 @@
 ## API Recipes: API Tasks
-This series of API Recipes describes API tasks associated with developing apps,  apps for Travel Management Companies, (TMC), Travel Suppliers and businesses who need to get data about their employees' travel related booking.  This recipe assumes you are a current Concur customer.
+This series of API Recipes describes API tasks associated with developing apps,  apps for Travel Management Companies, (TMC), Travel Suppliers and businesses who need to get data about their employees' travel related booking.  This recipe assumes you are a current Concur customer or platform partner.
 ### Before you begin
 Review the following checklist to ensure you are able to perform the task in this recipe. To see reference information, click the link in the bullet point
 Understand the [Oath 2.0 process](https://developer.concur.com/api-reference/authentication/authentication.html)
@@ -146,6 +146,64 @@ Once you have the trip details, look for trips that lack your segment type.
 In the case of **Apps for me** customer who has booked a hotel through Concur:
 - If your user has downloaded TV Food Maps, they will receive an email as the date of the trip approaches
 - The email will indicate which restaurants featured on which TV shows will be near the location at which the employee is staying
+
+## Advanced Information
+The information in this section is _NOT_  intended for use by Apps for me developers.
+
+#### Itinerary Status and Booking Source
+
+Travel Management Companies will find these two elements in the GET trips response extremely useful when obtaining Trip Details:
+
+- The status of the itinerary:  0- Confirmed; 1- Ticketed by agent; 2- Canceled
+- Booking Source (refer to the table below)
+
+How the itinerary was sent to Concur | BookingOwner | BookingSource
+----------------------------------------- | ---------------- | -------------
+Manually added itinerary | OpenBookingEmail | Manual
+Itinerary emailed to plans@concur.com | OpenBookingEmail | Supplier name, or Manual if parser can’t determine supplier
+Itinerary emailed to plans@tripit.com | TripIt | Supplier name, or Manual if parser can’t determine supplier
+Trip posted by TMC using Itinerary API | ConcurConnectAPI | Supplier name
+Booking posted by Open Booking Supplier using Itinerary API. _Discounts are still applied._  | OpenBookingSupplier | IHG
+Booked in Concur Travel (i.e. Cliqbook) or through an agent (and sent back to Concur Travel), or through  a direct connect.  _Discounts are still applied to agent bookings.  We can’t distinguish in the API between user booking via Concur Travel versus booked for them by agent.  We do track this internally_ | ConcurTravel | GDS name, or direct connect supplier name
+Amadeus e-Travel Management (AeTM) is an online self-booking tool integrated with Concur Expense. | AmadeusETravel
+
+#### Subscribe and Unsubscribe
+
+Concur Travel Suppliers and Travel Management Companies may need to know how to post a company notification subscription for itinerary changes. Use the information which follows to guide you. More information on these topics can be found in the Concur Developer Portal in the resource: [Subscribe or unsubscribe from notifications]( https://developer.concur.com/api-reference/user/company-notification-subscription-resource/company-notification-subscription-resource-post.html).
+
+To subscribe to notifications to be alerted whenever employees who have booked travel through Concur change their travel plans by adding, modifying or canceling an itinerary is referred to as a **POST Company Notification Subscription for Itinerary Changes request**.
+
+To create this request, use the following example as a template. Notice that the request parameter is **Itinerary**. The Request XML string also requires an Oath token for an administrative user in the company. The user must have one of the following user roles in Concur: Company Administrator or Web Services Administrator for Professional, or Can Administer for Standard.
+
+XML Example request to subscribe:
+```
+POST http://www.concursolutions.com/api/company/v1.0/subscribe?type=itinerary HTTP/1.1
+    Authorization: OAuth {access token}
+    ...
+```
+The notification is sent to the Postback URL that the partner has registered with Concur during application review. Partners can only have one postback URL for all notification types. The notification will include the type, oauth_token_key, userid_type, and userid_value query parameters, specifying the updated user as seen in the example:
+
+```
+https://postbackurl.com?type=itinerary&oauth_token_key={oauthtoken}&userid_type=login&userid_value=cm@example.com
+```
+
+While the response body includes a Notification parent element, there are several child elements.
+
+Element | Description
+--------- | ------------
+ObjectType | ITINERARY
+ObjectURI | The URI for the object. The developer can use the appropriate GET endpoint with the ObjectURI to get complete details for the trip.
+EventDateTime | When the event happened. Format: YYYY-MM-DDThh:mm:ss
+EventType | The type of the change. Format: CREATE, UPDATE, CANCEL
+Context | This is not used yet but will be used in future to specify the change in the trip. Developers can use this in conjunction with EventType to decide how to process the notification.
+TripID	| The unique identifier for the trip. Format: String
+
+XML Example request to unsubscribe from Itinerary Changes:
+```
+https://www.concursolutions.com/api/company/v1.0/unsubscribe?type=itinerary
+```
+Refer to the sample [Post Company Notification Subscription for Itinerary Changes Response](https://developer.concur.com/api-reference/user/company-notification-subscription-resource/company-notification-subscription-resource-post.html) for guidance.
+
 
 
 #### Make us better at making your experience easier.
