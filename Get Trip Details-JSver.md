@@ -1,7 +1,8 @@
 ﻿## API Recipes: API Tasks
-This series of API Recipes describes API tasks associated with TripLink Suppliers who need to get data about their employees’ travel related booking.  This recipe assumes you are a current Car or Hotel TripLink Supplier customer.
+This series of API Recipes describes API tasks associated with **TripLink** Suppliers who need to get data about their employees’ travel related booking.  This recipe assumes you are a current Car or Hotel TripLink Supplier customer.
+
 #### Before you begin
-Review the following checklist to ensure you are able to perform the task in this recipe. To see reference information, click the link in the bullet point
+Review the following checklist to ensure you are able to perform the task in this recipe. To see reference information, click the link in the bullet point.
 
 - Understand the [Oath 2.0 process](https://developer.concur.com/api-reference/authentication/authentication.html)
 - Ensure you have a definition ([XSD](https://developer.concur.com/api-reference/travel/itinerary/ItinServices_Public_0.xsd)), usable for architecting your solution
@@ -11,13 +12,14 @@ The Get Trip endpoint allows TripLink Supplier developers to pull trip detail da
 
 ##### Get Trip details:
 
-Developers may either build a scheduled process to poll for itineraries or get trips on demand when a user logs onto your website to make a booking. Using the Oauth token of the user for whom you want details as the authorization, perform this two-step process:
+Triplink Suppliers may either build a scheduled process to poll for itineraries or get trips on demand when a user logs onto your website to make a booking. Using the Oauth token of the user for whom you want details as the authorization, perform this two-step process:
 
 
 1. GET a list of trips for the user.
 2. GET the details of each trip one at a time.
 
 For more information on how to [GET a trip list](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#getts) for a user by using their Oauth token, consult this article in the API Reference at the Concur Developer Portal.
+
 ##### Example Get List of Trips request:
 You can use a scheduled job to poll at an interval or a process to get trips when the traveler logs into the TripLink Partner’s website or mobile app to make a booking. Use either of the following queries.
   ```
