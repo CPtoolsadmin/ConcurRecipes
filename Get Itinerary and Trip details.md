@@ -11,8 +11,6 @@ Review the following checklist to ensure you are able to perform the task in thi
 
 Developers, travel suppliers and travel management companies will want to use the processes described in this recipe.
 
-Developers, travel suppliers and travel management companies will want to use the processes described in this recipe.
-
 - With an authorized Oauth token, Developers can retrieve detailed itineraries for users or user groups. Using this data allows developers to create applications that match opportunities for users in a given locale, region or country specific to user interests.  For example, TV Food Maps matches destinations on a user’s itinerary to notify them of a featured restaurant from a TV show like Diners, DriveIns and Dives near the location of their itinerary
 - Travel Suppliers can use the processes to analyze itineraries/trips for gaps in such services as car rental and hotel accommodations, and use the information to offer these services. This is particularly useful if you want to provide an enhanced travel experience for your users
 - Travel Management Companies can use these processes to analyze individual or company travel data, offer traveler support services, Triplink support or business intelligence and analytics
