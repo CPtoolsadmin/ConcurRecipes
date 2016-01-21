@@ -1,8 +1,8 @@
 
 ## Posting for eReceipt
-This series of API Recipes describes API tasks associated with Apps for Me. Apps for Me are applications designed for individual business travelers, for example eReciepts and Traveler Awareness and Convenience apps like EZ Cater.
+This series of API Recipes describes API tasks associated with **Apps for Me**. Apps for Me are applications designed for individual business travelers, for example eReciepts and Traveler Awareness and Convenience apps like EZ Cater.
 
-Travel Suppliers and Travel Management Companies will want to use the process for posting an eReceipt and can skip the Before you begin section which follows.
+Travel Suppliers and Travel Management Companies will want to use the process for posting an eReceipt and can skip the **Before you begin** section which follows.
 
 #### Before you Begin
 
@@ -17,8 +17,10 @@ Before a partner user can download and use an App for Me from the App Center, en
 Ensure that if your Partner currently generates a receipt image, (.png, .jpg,.tif. pdf or other image file) that you include it in your post to Concur*
 
 *Concur generates a standard receipt for Partners who do not tender a receipt image. The standard receipt may not include additional fees and taxes collected the user's locale like VAT.
+
 #### Posting for eReceipt: Submitting expenses to Concur
 The eReceipt endpoint allows app partners to send an eReceipt to Concur on behalf of the user. This is particularly useful if you want to provide an automated expense experience for your users. For example, Uber currently sends an eReceipt to Concur whenever a user makes a payment transaction. Instead of the user forwarding an Uber email receipt, an eReceipt is sent on his/her behalf. An eReceipt can contain the same information, if not all, of the partner's receipt.
+
 Currently the eReceipts service supports these three types of receipts: general purpose receipts, hotel receipts for either hospitality service or accommodation and ride receipt for a ride service. It is important to remember that the Receipt Service only accepts receipts up to six months old. For more information, consult the Receipts article in the [Concur.com API Reference]( https://developer.concur.com/api-reference/expense/receipts/index.html) materials.
 
 This diagram explains how to send an eReceipt to Concur:
@@ -36,7 +38,7 @@ This diagram explains how to send an eReceipt to Concur:
 #### Accessing the eReceipt API:
 Unlike all the other Concur API endpoints, eReceipt requires the Concur Platform team to configure your sandbox to enable access. You can make that request from the Support Page [here](https://developer.concur.com/docs-and-resources/support). Remember to include the name of the Concur representative you with whom you are working in the form.
 
-The POST fields required for the eReceipt endpoint is located in the official Concur developer page [here](https://developer.concur.com/receipts/post-receipt), and test it out in our Swagger page [here](https://www.concursolutions.com/api/docs/index.html).
+The POST fields required for the eReceipt endpoint are located in the official Concur developer page [here](https://developer.concur.com/receipts/post-receipt), and test it out in our Swagger page [here](https://www.concursolutions.com/api/docs/index.html).
 
 ##### Important
 
@@ -135,11 +137,10 @@ Test your API in the [API Explorer](https://concurapi.readme.io/doc/poste-receip
 
 The user experience should flow like this:
 
-<!DOCTYPE html>
+
 <html>
 <body>
 
-<p>Insert an image from another folder:</p>
 <img src="/images/Normal flow" alt="Normal flow" width="276" height="630">
 
 </body>
