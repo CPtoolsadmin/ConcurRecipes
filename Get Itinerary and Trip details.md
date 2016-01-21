@@ -26,7 +26,7 @@ Each of these processes can be used by itself. For example if a travel supplier 
 #### Get List of Itineraries:
 The GET List of Itineraries required for the Get Itinerary endpoint is located in the official Concur developer page [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getlist).
 
-#### If you are a developer and only want to get the GET Itinerary API use the process which follows:
+##### If you are a developer and only want to get the GET Itinerary API use the process which follows:
 
 If you have not configured your sandbox to obtain access, you can make that request from the Support Page [here](https://developer.concur.com/api-reference/ ).  Remember to include the name of the Concur representative you with whom you are working in the form.
 
