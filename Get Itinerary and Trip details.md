@@ -67,7 +67,7 @@ includeMetadata=true&ItemsPerPage={_number_}&Page={_number_} |	The includeMetada
 includeVirtualTrip=_1_ |	Virtual trips are segments booked offline through the Travel Request product. Set the includeVirtualTrip query parameter to 1 to include those trips in the list
 includeCanceledTrips=_{true/false}_ |	The includeCanceledTrips query parameter will cause the request to also return trips with a status of Canceled.
 
-Refer to the sample [XML GET Itinerary Details Get request](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getdetails) for guidance:
+Refer to the sample [XML GET Itinerary Details Get request](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getdetails) for guidance.
 
 ### Get Itinerary details
 This process allows developers, travel suppliers and travel management companies to obtain details on itineraries for specific trips. By default, the Oauth consumer should be the owner of the trip. The Get Itinerary endpoint can also be used to get details for trips that the Oauth consumer does not own. Travel management companies use this process to get trip details on behalf of a user. This assumes the TMC is registered with Concur and possesses a valid Concur account with one the following user roles: Web Services Administrator for Professional, or Can Administer for Standard.
