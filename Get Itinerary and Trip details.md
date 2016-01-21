@@ -130,22 +130,22 @@ Accept: application/xml
 Refer to the sample [Get trip details for a trip ID]( https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#gettd) for guidance.
 
 ##### Important
-No itinerary can contain all of the possible elements, because the response will always be a subset of the possible returned values. For full response details, view the [Public Itinerary XSD](https://developer.concur.com/sites/default/files/ItinServices_Public_0.xsd )
+No itinerary can contain all of the possible elements, because the response will always be a subset of the possible returned values. For full response details, view the [Public Itinerary XSD](https://developer.concur.com/sites/default/files/ItinServices_Public_0.xsd ).
 
 Once you have the trip details, look for trips that lack your segment type.
 
--  For example, if you are a TripLink Car Supplier, look for trips that may include a flight but which lack a rental car reservation.
+-  For example, if you are a **TripLink** Car Supplier, look for trips that may include a flight but which lack a rental car reservation.
 
 - If you are a **TripLink** Hotel Supplier, look for trips that may include a flight but which lack a hotel reservation.  If you are polling for trips at an interval, you may choose to email a traveler to offer them your service to add to their upcoming trip.  For example, if you are a TripLink Hotel partner, you may choose to email the traveler: “If you would like to reserve a hotel for your upcoming trip to Boston on 13 December, we are offering a special rate at our property in city center.  Log on here to add a hotel reservation to your trip.”
 
-- If you are checking for upcoming trips when the traveler logs in to your mobile app or website to make a booking, you may choose to present to the traveler a list of their upcoming trips that lack your segment type.  For example, if you are a TripLink Car Supplier, you may choose to present a list of upcoming trips that lack a rental car reservation and allow the traveler to easily add a car rental to that trip, prepopulating the pickup and drop-off locations and dates/times using the information from the trip details.
+- If you are checking for upcoming trips when the traveler logs in to your mobile app or website to make a booking, you may choose to present to the traveler a list of their upcoming trips that lack your segment type.  For example, if you are a **TripLink** Car Supplier, you may choose to present a list of upcoming trips that lack a rental car reservation and allow the traveler to easily add a car rental to that trip, prepopulating the pickup and drop-off locations and dates/times using the information from the trip details.
 
 In the case of **Apps for me** customer who has booked a hotel through Concur:
 - If your user has downloaded TV Food Maps, they will receive an email as the date of the trip approaches
 - The email will indicate which restaurants featured on which TV shows will be near the location at which the employee is staying
 
 ## Advanced Information
-The information in this section is _NOT_  intended for use by Apps for me developers.
+The information in this section is _NOT_  intended for use by **Apps for me** developers.
 
 #### Itinerary Status and Booking Source
 
