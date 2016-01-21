@@ -106,6 +106,7 @@ PassengerCount | The number of passengers included in the booking.
 
 ### Get Trip details
 Developers should build a scheduled process to poll for itineraries or get trips on demand when a user logs onto your website to make a booking. Using the Oauth token of the user for whom you want details as the authorization, perform this two-step process:
+
 1. GET a list of trips for the user.
 2. GET the details of each trip one at a time.
 
