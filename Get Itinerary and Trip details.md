@@ -56,13 +56,13 @@ Additional examples can be viewed [here](https://developer.concur.com/api-refere
 Name | Description
 --------------- | ---------------
 tripId	| The trip ID
-startDate={_date_} |	The URL-encoded UTC start date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the start date is set to today�s date - 30 days.
-endDate****={_date_} |	The URL-encoded UTC end date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the end date is set to today�s date + 12 months.
+startDate={_date_} |	The URL-encoded UTC start date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the start date is set to today's date - 30 days.
+endDate****={_date_} |	The URL-encoded UTC end date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the end date is set to today's date + 12 months.
 createdAfterDate****={_date_} |	The URL-encoded UTC date for when the trip was created. The query string will return trips created on or after this date. Used with the createdafterdate for finding trips created during a date range. Format: YYYY-MM-DD
 createdBeforeDate****={_date_} | The last modified UTC date of the trips and any their associated bookings. This query string will return only the trips where the trip or any of its associated bookings have a last modified date that is greater or equal to the supplied time
 lastModifiedDate****={_date_} |	The trip includes at least one booking of this type. Format: Air, Car, Dining, Hotel, Parking, Rail, or Ride
 bookingType={_type_} |	The trip includes at least one booking of this type. Format: Air, Car, Dining, Hotel, Parking, Rail, or Ride
-userid_type=login&userid_value=_{loginID}_ |	The loginID is the user�s Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company. The userid_type and userid_value parameters can only be used if the OAuth consumer has one of the user roles listed above.
+userid_type=login&userid_value=_{loginID}_ |	The loginID is the user's Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company. The userid_type and userid_value parameters can only be used if the OAuth consumer has one of the user roles listed above.
 includeMetadata=true&ItemsPerPage={_number_}&Page={_number_} |	The includeMetadata query parameter combined with the ItemsPerPage and Page query parameters will cause the response to be divided into pages.
 includeVirtualTrip=_1_ |	Virtual trips are segments booked offline through the Travel Request product. Set the includeVirtualTrip query parameter to 1 to include those trips in the list
 includeCanceledTrips=_{true/false}_ |	The includeCanceledTrips query parameter will cause the request to also return trips with a status of Canceled.
@@ -76,7 +76,7 @@ This process allows developers, travel suppliers and travel management companies
 Name | 	Description
 --------------- | ---------------
 {_tripId_} | Required. The identifier for the desired trip
-userid_type=login&userid_value=_{loginID}_ |	The loginID is the user�s Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company.
+userid_type=login&userid_value=_{loginID}_ |	The loginID is the user's Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company.
 systemFormat=_{format}_	|The systemFormat query parameter can be used to specify that the response is formatted for a different system. The supported value is Tripit.
 
 The request returns an itinerary parent element with a subset of child elements. A partial list appears below. The complete list is located [here]( https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getdetails).
@@ -135,7 +135,7 @@ Once you have the trip details, look for trips that lack your segment type.
 
 -  For example, if you are a TripLink Car Supplier, look for trips that may include a flight but which lack a rental car reservation.
 
-- If you are a TripLink Hotel Supplier, look for trips that may include a flight but which lack a hotel reservation.  If you are polling for trips at an interval, you may choose to email a traveler to offer them your service to add to their upcoming trip.  For example, if you are a TripLink Hotel partner, you may choose to email the traveler: “If you would like to reserve a hotel for your upcoming trip to Boston on 13 December, we are offering a special rate at our property in city center.  Log on here to add a hotel reservation to your trip.”
+- If you are a **TripLink** Hotel Supplier, look for trips that may include a flight but which lack a hotel reservation.  If you are polling for trips at an interval, you may choose to email a traveler to offer them your service to add to their upcoming trip.  For example, if you are a TripLink Hotel partner, you may choose to email the traveler: “If you would like to reserve a hotel for your upcoming trip to Boston on 13 December, we are offering a special rate at our property in city center.  Log on here to add a hotel reservation to your trip.”
 
 - If you are checking for upcoming trips when the traveler logs in to your mobile app or website to make a booking, you may choose to present to the traveler a list of their upcoming trips that lack your segment type.  For example, if you are a TripLink Car Supplier, you may choose to present a list of upcoming trips that lack a rental car reservation and allow the traveler to easily add a car rental to that trip, prepopulating the pickup and drop-off locations and dates/times using the information from the trip details.
 
