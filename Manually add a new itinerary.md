@@ -1,5 +1,5 @@
 ## API Recipes: API Tasks
-This series of API Recipes describes API tasks associated with Apps for Travel Management Companies, (TMC), Travel Suppliers and business who need to get data about their employees' travel related booking.  This recipe assumes you are a current Concur customer.
+This series of API Recipes describes API tasks associated with Apps for Travel Management Companies, (TMC), Travel Suppliers and business who need to get data about their employees' travel related booking.  This recipe assumes you are a current Concur customer or platform partner.
 
 #### Before you begin
 Review the following checklist to ensure you are able to perform the task in this recipe. To see reference information, click the link in the bullet point.
@@ -36,7 +36,7 @@ Using the following process, you can easily create trips in your sandbox for tes
       </html>
      ```
 
-6. Select from: Add Flight, Add Car, Add Hotel or Add Rail (not shown). Enter the appropriate test data by using the drop down features or by using the free form fields.
+6. Select from: **Add Flight**, **Add Car**, **Add Hotel** or **Add Rail** (not shown). Enter the appropriate test data by using the drop down features or by using the free form fields.
 
     ```
     <html>
@@ -56,6 +56,7 @@ GET /api/travel/trip/v1.1/?createdAfterDate=2012%2F02%2F01&includeMetadata=true&
 Host: [www.concursolutions.com][1]
 Authorization: OAuth {access token}
 ```
+
 ###### XML example of a successful response with Paging:
 ```
 HTTP 1.1 200 OK
@@ -97,7 +98,7 @@ Content-Type: application/xml
     </Data>
 </ConnectResponse>
 ```
-###### Test your API in your tool of choice. A successful response will look like this.
+###### Test your API in your tool of choice. A successful response will look like this:
 ```
 HTTP 1.1 200 OK
 Content-Type: application/xml
@@ -231,5 +232,6 @@ Content-Type: application/xml
     </Bookings>
 </Itinerary>
 ```
+
 #### Make us better at making your experience easier.
 Share a Concur API process issue we can do better. Provide us with an explanation, screen shots and your recommendation [here](http://forum.developer.concur.com/).
