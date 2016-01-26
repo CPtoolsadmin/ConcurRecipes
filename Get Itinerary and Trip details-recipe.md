@@ -45,9 +45,11 @@ This task retrieves trip summaries for the traveler specified in the Oauth token
   https://www.concursolutions.com/api/travel/trip/v1.1/?startDate={startdate}&endDate={enddate}&_createdAfterDate={_date}&createdBeforeDate={date}&lastModifiedDate={date}&bookingType={type}&userid_type=login&userid_value=ALL
 
 Individual user (Oauth consumer)
+
 https://www.concursolutions.com/api/travel/trip/v1.1/?startDate={startdate}&endDate={enddate}&_createdAfterDate={_date}&createdBeforeDate={date}&lastModifiedDate={date}&bookingType={type}
 
 Individual user (other than the Oauth consumer)
+
 https://www.concursolutions.com/api/travel/trip/v1.1/?startDate={startdate}&endDate={enddate}&_createdAfterDate={_date}&createdBeforeDate={date}&lastModifiedDate={date}&bookingType={type}&userid_type=login_id&userid_value={loginID}
 
 Additional examples can be viewed [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getlist).
