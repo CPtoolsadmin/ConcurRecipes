@@ -25,8 +25,8 @@ Using the following process, you can easily create trips in your sandbox for tes
       ```
 
 3. In Travel Alerts, click the **Upcoming Trips** tab.
-4.  Click **Add new Itinerary manually**.
-5. The Add New Reservation dialog appears. **Select Create New Trip** from the drop down, **Add Reservation to Trip**.
+4. Click **Add new Itinerary manually**.The Add New Reservation dialog appears.
+5. **Select Create New Trip** from the drop down, **Add Reservation to Trip**.
 
     ```
       <html>
