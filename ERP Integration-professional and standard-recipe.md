@@ -57,7 +57,8 @@ xml
               <name>Asian Extract</name>
           </definition>
       </definitions>
-  ```
+  
+  ```   
 2. Locate the desired definitions for your client. You may need to obtain additional details as there may be multiple files to obtain depending on client requirements. You should record the Definition ID to use in subsequent APIs because doing so eliminates a common step. Your GET extract definitions details request looks like the example:
 
    ```
@@ -77,7 +78,7 @@ xml
         <name>AMEX Remittance - US</name>
         <job-link>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3/job</job-link>
     </definition>
-   ```
+```
 
 3. Obtain and record the Job_ID using this GET request: https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job. This will request a list of the last 100 extract jobs run for the specified extract definition.
 
