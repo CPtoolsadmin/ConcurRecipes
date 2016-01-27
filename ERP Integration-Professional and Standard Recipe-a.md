@@ -78,19 +78,20 @@ xml
         <job-link>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3/job</job-link>
     </definition>
    ```
-
 3. Obtain and record the Job_ID using this GET request: https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job.
 
   This will request a list of the last 100 extract jobs run for the specified extract definition.
 
   XML example of a Job ID GET request:
-```
+	```
 GET https://www.concursolutions.com/api/expense/extract/v1.0/nYoPK$pZmcowMRUqcl5bnDAwwsMydyt$xd/job HTTP/1.1
     Authorization: OAuth {access token}
     ...
-    ```
+    ```   
+    
     XML example of a successful response:
-  ```
+    
+  	```
   200 OK
   Content-Type: application/xml
 
@@ -118,15 +119,16 @@ GET https://www.concursolutions.com/api/expense/extract/v1.0/nYoPK$pZmcowMRUqcl5
           <file-link>https://www.concursolutions.com/api/expense/extract/v1.0/nYoPK$pZmcowMRUqcl5bnDAwwsMydyt$xd/job/uI77ndy0Q1szuU73XSh56lshi$p215gHs1/file</file-link>
       </job>
   </jobs>
-  ```
+  ```   
 4. GET the status of the Extract File Job using this GET request:
-```
+
+	```
 GET https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job/{JobID}/status HTTP/1.1
     Authorization: OAuth {access token}
     ...
-    ```
-XML example of a successful response:
-```
+  ```
+	XML example of a successful response:
+	```
 200 OK
     Content-Type: application/xml
     <job xmlns="http://www.concursolutions.com/api/expense/extract/2010/02" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -137,24 +139,26 @@ XML example of a successful response:
         <status>Completed</status>
         <file-link>https://www.concursolutions.com/api/expense/extract/v1.0/nX8O9$pytn6vJEWvLOZxyy3GcNGyj0ZklG/job/nIJp1lR2R0LNT4XcO5fXG$s$sZmVuRTuG$ps/file</file-link>
     </job>
-    ```
+   ```
 
 5. GET the desired file using this GET request:
-```
+	```
 xml
     GET https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job/{JobID}/file HTTP/1.1
     Authorization: OAuth {access token}
     ...
-    ```
+  ```
 XML example of a successful response for a single extract file:
-```
+
+	```
 xml
     200 OK
     Content-Type: text/csv
     100,AAA,BBBB,CCCC,...<rest of file>
-    ```
+  ```
 
   XML example of a successful response for multiple extract files:
+  
   ```
   xml
       200 OK
@@ -166,7 +170,7 @@ xml
 
 Standard Edition ERP Integration assumes that you are working for or on behalf of a Financial Integration Company. Once your app is certified, and you have obtained a signed letter of agreement from a client, you can obtain that client’s expense report data through the extract file produced by Concur’s service.
 
-##### API’s used to obtain extract files for your client
+##### APIs used to obtain extract files for your client
   Before you begin, you need to have the client close the Payment Manager batch using the appropriate API’s in order for you to retrieve the files using the API below. Ask your client not to close the batch manually through the User Interface.
 
   Navigate to [Payment Batches](https://developer.concur.com/api-reference/expense/payment-batch/payment-batches.html).
