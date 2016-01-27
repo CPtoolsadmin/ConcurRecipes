@@ -18,7 +18,7 @@ Triplink Suppliers may either build a scheduled process to poll for itineraries 
 1. GET a list of trips for the user.
 2. GET the details of each trip one at a time.
 
-For more information on how to [GET a trip list](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#getts) for a user by using their Oauth token, consult this article in the API Reference at the Concur Developer Portal.
+Consult the article on how to [GET a trip list](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#getts) for a user by using their Oauth token for more information.
 
 ##### Example Get List of Trips request:
 You can use a scheduled job to poll at an interval or a process to get trips when the traveler logs into the TripLink Partner’s website or mobile app to make a booking. Use either of the following queries.
