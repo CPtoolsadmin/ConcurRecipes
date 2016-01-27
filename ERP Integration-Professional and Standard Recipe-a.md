@@ -67,18 +67,17 @@ Navigate to [Extracts](https://developer.concur.com/api-reference/common/extract
    ```
 
    XML example of a successful response:
-```
-xml
-    200 OK
-    Content-Type: application/xml
+  ```
+  xml
+      200 OK
+      Content-Type: application/xml
 
-     <definition xmlns="http://www.concursolutions.com/api/expense/extract/2010/02" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-        <id>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3</id>
-        <name>AMEX Remittance - US</name>
-        <job-link>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3/job</job-link>
-    </definition>
-   ```
-
+       <definition xmlns="http://www.concursolutions.com/api/expense/extract/2010/02"   xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+          <id>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3</id>
+          <name>AMEX Remittance - US</name>
+          <job-link>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3/job</job-link>
+      </definition>
+    ```
 3. Obtain and record the Job_ID using this GET request: 
    ```
    https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job.
