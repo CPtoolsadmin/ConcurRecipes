@@ -78,8 +78,11 @@ xml
         <job-link>https://www.concursolutions.com/api/expense/extract/v1.0/n59FpBJ8hN3qVWTFIrtxkOT5$pef6DmIj3/job</job-link>
     </definition>
    ```
-3. Obtain and record the Job_ID using this GET request: https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job.
 
+3. Obtain and record the Job_ID using this GET request: 
+   ```
+   https://www.concursolutions.com/api/expense/extract/v1.0/{DefinitionID}/job.
+   ```
   This will request a list of the last 100 extract jobs run for the specified extract definition.
 
   XML example of a Job ID GET request:
