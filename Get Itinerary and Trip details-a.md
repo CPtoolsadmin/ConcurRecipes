@@ -114,7 +114,7 @@ Developers should build a scheduled process to poll for itineraries or get trips
 1. GET a list of trips for the user.
 2. GET the details of each trip one at a time.
 
-For more information on how to GET a trip list for a user by using their Oauth token, go [here](https://developer.concur.com/itinerary-tmc-and-third-party-developers/itinerary-resource/itinerary-resource-get#listofitins).
+For more information on how to GET a trip list for a user by using their Oauth token, go [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getlist).
 
 #### Example Get List of Trips request:
 ```
