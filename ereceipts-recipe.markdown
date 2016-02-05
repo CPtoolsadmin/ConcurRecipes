@@ -14,7 +14,7 @@ Before a partner user can download and use an App for Me from the App Center, en
 - Ensure your app includes the ability to [refresh the Concur authentication token](https://developer.concur.com/api-reference/authentication/authentication.html#refreshing-access-token)
 - Ensure your app includes the ability to respond appropriately to revoked token messages <API Guide link>
 - Ensure your app has at least [two methods by which it can authenticate](https://developer.concur.com/api-reference/authentication/authentication.html#access-tokens)
-Ensure that if your Partner currently generates a receipt image, (.png, .jpg,.tif. pdf or other image file) that you include it in your post to Concur*
+- Ensure that if your Partner currently generates a receipt image, (.png, .jpg,.tif. pdf or other image file) that you include it in your post to Concur*
 
 *Concur generates a standard receipt for Partners who do not tender a receipt image. The standard receipt may not include additional fees and taxes collected the user's locale like VAT.
 
@@ -38,7 +38,7 @@ This diagram explains how to send an eReceipt to Concur:
 #### Accessing the eReceipt API:
 Unlike all the other Concur API endpoints, eReceipt requires the Concur Platform team to configure your sandbox to enable access. You can make that request from the Support Page [here](https://developer.concur.com/docs-and-resources/support). Remember to include the name of the Concur representative you with whom you are working in the form.
 
-The POST fields required for the eReceipt endpoint are located in the official Concur developer page [here](https://developer.concur.com/receipts/post-receipt), and test it out in our Swagger page [here](https://www.concursolutions.com/api/docs/index.html).
+The POST fields required for the eReceipt endpoint are located in the official Concur developer page [here](https://developer.concur.com/api-reference/expense/receipts/index.html#post), and test it out in our Swagger page [here](https://www.concursolutions.com/api/docs/index.html).
 
 ##### Important
 
