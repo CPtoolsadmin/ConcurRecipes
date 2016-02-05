@@ -6,6 +6,7 @@ Understand the [Oath 2.0 process](https://developer.concur.com/api-reference/aut
 - Be able to access the [Get Trips API](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#postnt)
 - Be able to access the [Itinerary Web Service (TMC & Third Party)](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html)
 - Ensure you have a definition [XSD](https://developer.concur.com/api-reference/travel/itinerary/ItinServices_Public_0.xsd), usable for architecting your solution
+
 ### Get Itinerary and Trip Details: Pulling Itinerary Trip data from Concur
 
 Developers, travel suppliers and travel management companies will want to use the processes described in this recipe.
@@ -113,7 +114,7 @@ Developers should build a scheduled process to poll for itineraries or get trips
 1. GET a list of trips for the user.
 2. GET the details of each trip one at a time.
 
-For more information on how to GET a trip list for a user by using their Oauth token, go [here](https://developer.concur.com/itinerary-tmc-and-third-party-developers/itinerary-resource/itinerary-resource-get#listofitins).
+For more information on how to GET a trip list for a user by using their Oauth token, go [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getlist).
 
 #### Example Get List of Trips request:
 ```
@@ -130,11 +131,11 @@ GET https://{InstanceURL}/api/travel/trip/v1.1/{TripID} HTTP/1.1
 Authorization: OAuth {user's access token}
 Accept: application/xml
 ```
-Refer to the sample [Get trip details for a trip ID]( https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#gettd) for guidance.
+Refer to the sample [Get trip details for a trip ID](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#gettd) for guidance.
 
 ##### Important
 No itinerary can contain all of the possible elements, because the response will always be a subset of the possible returned values. For full response details, view the [Public Itinerary XSD](https://developer.concur.com/api-reference/travel/itinerary/ItinServices_Public_0.xsd)
- )
+
 
 Once you have the trip details, look for trips that lack your segment type.
 
