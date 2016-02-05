@@ -6,6 +6,7 @@ Understand the [Oath 2.0 process](https://developer.concur.com/api-reference/aut
 - Be able to access the [Get Trips API](https://developer.concur.com/api-reference/travel/itinerary/trip/trip-resource.html#postnt)
 - Be able to access the [Itinerary Web Service (TMC & Third Party)](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html)
 - Ensure you have a definition [XSD](https://developer.concur.com/api-reference/travel/itinerary/ItinServices_Public_0.xsd), usable for architecting your solution
+
 ### Get Itinerary and Trip Details: Pulling Itinerary Trip data from Concur
 
 Developers, travel suppliers and travel management companies will want to use the processes described in this recipe.
