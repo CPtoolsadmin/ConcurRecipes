@@ -38,7 +38,7 @@ If you have not configured your sandbox to obtain access, you can make that requ
 If you have configured your sandbox, the GET List of Itineraries required for the Get Itinerary endpoint is located in the official Concur developer page [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html).
 
 ##### Important
-- Use the Itinerary scope. More details [here](https://developer.concur.com/oauth-20/web-flow). Use the search term ITINER
+- Use the Itinerary scope. More details [here](https://developer.concur.com/api-reference/authentication/authentication.html#web). Use the search term ITINER
 - Use either Web flow or Apps Center flow authentication
 - Ensure that your dates are recent
 
