@@ -38,7 +38,7 @@ If you have not configured your sandbox to obtain access, you can make that requ
 If you have configured your sandbox, the GET List of Itineraries required for the Get Itinerary endpoint is located in the official Concur developer page [here](https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html).
 
 ##### Important
-- Use the Itinerary scope. More details [here](https://developer.concur.com/oauth-20/web-flow). Use the search term ITINER
+- Use the Itinerary scope. More details [here](https://developer.concur.com/api-reference/authentication/authentication.html#web). Use the search term ITINER
 - Use either Web flow or Apps Center flow authentication
 - Ensure that your dates are recent
 
@@ -61,13 +61,13 @@ Additional examples can be viewed [here](https://developer.concur.com/api-refere
 Name | Description
 --------------- | ---------------
 tripId	| The trip ID
-startDate={_date_} |	The URL-encoded UTC start date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the start date is set to today�s date - 30 days.
-endDate****={_date_} |	The URL-encoded UTC end date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the end date is set to today�s date + 12 months.
+startDate={_date_} |	The URL-encoded UTC start date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the start date is set to today's date - 30 days.
+endDate****={_date_} |	The URL-encoded UTC end date for the trip. Format: YYYY-MM-DD. If no query parameters are provided, the end date is set to today's date + 12 months.
 createdAfterDate****={_date_} |	The URL-encoded UTC date for when the trip was created. The query string will return trips created on or after this date. Used with the createdafterdate for finding trips created during a date range. Format: YYYY-MM-DD
 createdBeforeDate****={_date_} | The last modified UTC date of the trips and any their associated bookings. This query string will return only the trips where the trip or any of its associated bookings have a last modified date that is greater or equal to the supplied time
 lastModifiedDate****={_date_} |	The trip includes at least one booking of this type. Format: Air, Car, Dining, Hotel, Parking, Rail, or Ride
 bookingType={_type_} |	The trip includes at least one booking of this type. Format: Air, Car, Dining, Hotel, Parking, Rail, or Ride
-userid_type=login&userid_value=_{loginID}_ |	The loginID is the user�s Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company. The userid_type and userid_value parameters can only be used if the OAuth consumer has one of the user roles listed above.
+userid_type=login&userid_value=_{loginID}_ |	The loginID is the user's Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company. The userid_type and userid_value parameters can only be used if the OAuth consumer has one of the user roles listed above.
 includeMetadata=true&ItemsPerPage={_number_}&Page={_number_} |	The includeMetadata query parameter combined with the ItemsPerPage and Page query parameters will cause the response to be divided into pages.
 includeVirtualTrip=_1_ |	Virtual trips are segments booked offline through the Travel Request product. Set the includeVirtualTrip query parameter to 1 to include those trips in the list
 includeCanceledTrips=_{true/false}_ |	The includeCanceledTrips query parameter will cause the request to also return trips with a status of Canceled.
@@ -81,7 +81,7 @@ This process allows developers, travel suppliers and travel management companies
 Name | 	Description
 --------------- | ---------------
 {_tripId_} | Required. The identifier for the desired trip
-userid_type=login&userid_value=_{loginID}_ |	The loginID is the user�s Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company.
+userid_type=login&userid_value=_{loginID}_ |	The loginID is the user's Concur login ID. The userid_value of ALL can be sent to get trip summaries for all users at the company.
 systemFormat=_{format}_	|The systemFormat query parameter can be used to specify that the response is formatted for a different system. The supported value is Tripit.
 
 The request returns an itinerary parent element with a subset of child elements. A partial list appears below. The complete list is located [here]( https://developer.concur.com/api-reference/travel/itinerary-tmc-thirdparty/index.html#getdetails).
