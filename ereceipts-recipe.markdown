@@ -42,7 +42,7 @@ The POST fields required for the eReceipt endpoint are located in the official C
 
 ##### Important
 
-- Use the ERECPT scope. More details [here](https://developer.concur.com/oauth-20/web-flow). Search Term: ERECPT.
+- Use the ERECPT scope. More details [here](https://developer.concur.com/api-reference/authentication/authentication.html#web). Search Term: ERECPT.
 - Use the easier Native Flow authentication for Application 2 in your sandbox to retrieve the user token
 - Ensure that your dates are recent
 
