@@ -134,7 +134,7 @@ Refer to the sample [Get trip details for a trip ID]( https://developer.concur.c
 
 ##### Important
 No itinerary can contain all of the possible elements, because the response will always be a subset of the possible returned values. For full response details, view the [Public Itinerary XSD](https://developer.concur.com/api-reference/travel/itinerary/ItinServices_Public_0.xsd)
- )
+
 
 Once you have the trip details, look for trips that lack your segment type.
 
